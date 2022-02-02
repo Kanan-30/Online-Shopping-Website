@@ -1,0 +1,514 @@
+                                                      /* Global Styles
+..................................................................................................................................... */
+
+html
+{
+    box-sizing: border-box;
+}
+*, *:before, *:after
+{
+    box-sizing: inherit;
+}
+body
+{
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;   
+}
+
+                                                          /* Logo
+........................................................................................................................................*/
+
+.logo
+{
+  padding-left: 5px;
+  padding-top: 10px;
+  width:120px;
+  height: 60px;
+}
+                                                      /* Navigation Bar 
+.........................................................................................................................................*/
+nav
+{
+  
+  overflow: visible;
+  list-style-type: none;
+  background-color:turquoise;
+  display: flex;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+}
+nav ul
+{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  width: 100%;
+}
+
+li {
+  float: left;
+  font-size: 23px;
+}
+
+
+nav a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+li a:hover {
+  border: 1px solid white;
+}
+.search-box-container
+{
+  display:inline-flex;
+  padding-left: 15px;
+  
+}
+
+nav ul ul
+{
+  font-size: 1.2rem;
+  border-left: 3px solid purple;
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+}
+
+nav ul ul a {
+  font-size:20px;
+  background-color: white;
+  color: black;
+}
+@media screen  and (max-width:1500px)
+{
+    nav ul
+    {
+        display: inline-block;
+    }
+}
+ 
+@media screen  and (max-width:1500px)
+{
+  .search-box-container
+{
+    width: 510px;
+}
+nav
+{
+    display: flex;
+    background-color: turquoise;
+    font-size: small;
+}
+nav ul
+{
+    display: flex;
+}
+.logo
+{
+    display: flex;
+}
+}
+
+/* Dropdown
+..................................................................................................................... */
+.dropdown
+{
+  position: relative;
+}
+
+.dropdown-menu
+{
+  display: none;
+  position:absolute;
+  z-index: 1;
+  border-left: 3px solid rgb(219, 219, 219);
+  border-right: 3px solid rgb(219, 219, 219);
+  border-bottom: 3px solid rgb(219, 219, 219);
+  width: 100%;
+  height: auto;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.dropdown:hover .dropdown-menu
+{
+  display: block;
+}
+
+.divider
+{
+  border-top: solid 2px #c7c6c6;
+  /* border-top: solid 2px black; */
+  /* clear: both; */
+  height: 1px;
+  /* margin-left: 20px; */
+  width: 100%;
+}
+.All
+{
+  padding-left: 20px;
+  padding-right: 14px;
+  padding-top: 14px;
+  font-size:20px;
+  color: white;
+  cursor: pointer;
+}
+                                                /* Side Menu
+..................................................................................................................... */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    border-right: 2px solid black;
+  }
+  
+.sidenav a {
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+    display: block;
+    transition: 0.3s;
+  }
+  
+.sidenav a:hover {
+    color: #f1f1f1;
+    border: none;
+
+  }
+  
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .user
+{
+  padding-top: 7px;
+  padding-left: 30px;
+  font-size: 25px;
+  height: 40px;
+  background-color: black;
+  color: #fff
+}
+
+.shop
+{
+  padding-left: 15px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+                                                /* sidenav1
+....................................................................................................................................... */
+.shop_by
+{
+  font-size: 20px;
+  color:black;
+  cursor: pointer;
+  padding-left: 0;
+}
+
+.shop_by:hover
+{
+  color: #f1f1f1;
+}
+.sidenav1 {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 20px;
+  border-right: 2px solid black;
+}
+
+.sidenav1 a {
+  padding: 8px 8px 8px 0px;
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  
+}
+
+.sidenav1 a:hover {
+  background-color: #f1f1f1;
+  border: none;
+
+}
+
+.sidenav1 .MainMenu {
+  display:block;
+  font-family:'Times New Roman', Times, serif;
+  top: 0;
+  font-size: 16px;
+}
+                                              /* Search Box
+............................................................................................................................................ */
+.search-box-container input
+{
+  height: 50px;
+  width:850px;
+  padding:1rem;
+  font-size: 2rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+  cursor: pointer;
+  border:.1rem solid rgba(0,0,0,.3);
+}
+
+.search-box-container ::placeholder
+{
+  text-align: center;
+  font-size: xx-large;
+  color: rgb(226, 224, 224);
+  font-family: cursive;
+}
+
+.search-box-container .label1 {
+  border:.1rem solid rgba(0,0,0,.3);
+  height: 50px;
+  width:8rem;
+  line-height: 3rem;
+  font-size: 1.5rem;
+  color:black;
+  background-color: #C0FDFB;
+  text-align: center;
+  cursor: pointer;
+}
+
+                                  /* Cart
+........................................................................................................................................... */
+
+.products-container
+{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 100px;
+  max-width: 650px;
+  margin-left: 100px;
+  margin-top: 50px;
+  border: 1px solid lightgrey;
+}
+h2
+{
+    text-align: center;
+    font-weight: normal;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.box
+{
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: 0;
+  width: 500px;
+  justify-content: space-around;
+  margin-left: 800px;
+  margin-top: 50px;
+  border: 1px solid lightgrey;
+}
+.product-header
+{
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: flex-start;
+  border-bottom:  4px solid lightgrey;
+  margin: 0 auto;
+}
+
+.product-title
+{
+    padding-left: 50px;
+  width:45%;
+}
+
+.price{
+    
+padding-left: 20px;
+  width:15%;
+  border-bottom:  1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.quantity
+{
+    padding-left: 60px;
+  width:30%;
+  border-bottom:  1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.total
+{
+  width:10%;
+  border-bottom:  1px solid lightgrey;
+  display: flex;
+  align-items: center;
+}
+
+.product
+{
+  padding-left: 20px;
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom:  1px solid lightgrey;
+}
+
+
+
+.products 
+{
+ padding-left: 20px;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products img
+{
+  width: 100px;
+}
+
+.cartTotalConatiner
+{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.cartTotalTitle
+{
+  width: 30%;
+}
+
+.cartTotal{
+  width: 10%;
+}
+
+.button1 {
+    display: inline-block;
+    border-radius: 20px;
+    background-color:lightcyan;
+    border: none;
+    color: gray;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 400px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 50px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  .button1 span {
+    cursor:pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .button1 span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button1:hover span {
+    padding-right: 25px;
+  }
+  .button1:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+a .trash
+{
+  color: black;
+  font-size: 15px;
+}
+
+.openbox
+{
+    padding: 50px;
+    padding-bottom: 0;
+  font-size: 200px;
+  color: burlywood;
+}
+
+.lock
+{
+padding-left: 100px;
+padding-top: 5px;
+  font-size: 200px;
+  color: turquoise;
+}
+
+.products-container1
+{
+    padding-bottom: 0;
+}
+
+.products-container1 a
+{
+    color:black;
+    text-decoration: none;
+}
+
+ /*                                                               mediaqueries
+........................................................................................................................................... */
+@media screen  and (max-width:1400px)
+{
+  nav ul {display: none;}
+  nav{display: block;}
+  .box {display: none;}
+}
+
+@media screen and (max-width:1400px){
+  nav  a
+  {
+    display: none;
+  }
+  nav
+  {
+    display: inline-block;
+    background-color: turquoise;
+  }
+  .box {display: none;}
+  
+}
+                                                
